@@ -405,14 +405,19 @@
       <div class="corner-tr"></div>
       <div class="corner-bl"></div>
 
-      <div class="photo-placeholder" id="dropZone" onclick="document.getElementById('fileInput').click()">
-        <div class="scan-line" id="scanLine"></div>
-        <i class="ti ti-user-circle upload-icon"></i>
-        <div class="upload-text">CLICK TO UPLOAD<br>YOUR PHOTO</div>
-        <div class="upload-hint">JPG, PNG, WEBP</div>
+      <!-- Owner rasmi: src ga rasm URL ni qo'ying -->
+      <img class="photo-img" 
+           src="https://raw.githubusercontent.com/Biloliddin177/Portfolio-/main/photo_2025-10-17_11-14-50.jpg"
+           alt="Biloliddin Isomiddinov"
+           style="display:block;"
+           onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';"/>
+
+      <!-- Rasm yuklanmasa fallback -->
+      <div id="photoFallback" style="display:none; width:100%; height:100%; border:1px dashed rgba(0,200,130,0.3); flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+        <i class="ti ti-user-circle" style="font-size:48px; color:rgba(0,200,130,0.4);"></i>
+        <span style="font-family:'Space Mono',monospace; font-size:11px; color:rgba(0,200,130,0.4); letter-spacing:1px;">BILOLIDDIN ISOMIDDINOV</span>
       </div>
 
-      <img class="photo-img" id="photoImg" alt="Profile photo"/>
       <div class="photo-badge">NLP · CV · PYTORCH</div>
     </div>
 
@@ -432,7 +437,7 @@
     </div>
   </div>
 
-  <input type="file" id="fileInput" accept="image/*"/>
+
 </section>
 
 <!-- SKILLS -->
@@ -592,38 +597,6 @@
 </footer>
 
 <script>
-  /* ── PHOTO UPLOAD ── */
-  const fileInput  = document.getElementById('fileInput');
-  const photoImg   = document.getElementById('photoImg');
-  const dropZone   = document.getElementById('dropZone');
-  const scanLine   = document.getElementById('scanLine');
-
-  function showPhoto(src) {
-    photoImg.src = src;
-    photoImg.style.display = 'block';
-    dropZone.style.display = 'none';
-    scanLine.style.display = 'none';
-  }
-
-  fileInput.addEventListener('change', e => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = ev => showPhoto(ev.target.result);
-    reader.readAsDataURL(file);
-  });
-
-  dropZone.addEventListener('dragover',  e => { e.preventDefault(); dropZone.style.borderColor = 'var(--green)'; });
-  dropZone.addEventListener('dragleave', () => { dropZone.style.borderColor = 'rgba(0,200,130,0.35)'; });
-  dropZone.addEventListener('drop', e => {
-    e.preventDefault();
-    const file = e.dataTransfer.files[0];
-    if (!file || !file.type.startsWith('image/')) return;
-    const reader = new FileReader();
-    reader.onload = ev => showPhoto(ev.target.result);
-    reader.readAsDataURL(file);
-  });
-
   /* ── INTERSECTION OBSERVER — fade-up & skill bars ── */
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
