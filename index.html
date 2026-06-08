@@ -217,11 +217,17 @@
     /* ── SECTION SHARED ── */
     section { padding: 90px 48px; }
     .sec-label {
-      font-family: 'Space Mono', monospace; font-size: 14px;
-      color: #E8EDF2; letter-spacing: 3px; text-transform: uppercase;
-      display: flex; align-items: center; gap: 14px; margin-bottom: 48px;
+      font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 700;
+      color: #E8EDF2; letter-spacing: 2px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 12px; margin-bottom: 56px;
+      text-transform: capitalize;
     }
-    .sec-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .sec-label::after {
+      content: ''; width: 48px; height: 2px;
+      background: var(--green);
+    }
+
 
     /* ── SKILLS ── */
     #skills { background: var(--bg2); }
@@ -419,23 +425,7 @@
         <span style="font-family:'Space Mono',monospace; font-size:11px; color:rgba(0,200,130,0.4); letter-spacing:1px;">BILOLIDDIN ISOMIDDINOV</span>
       </div>
 
-      <div class="photo-badge">NLP · COMPUTER VISION</div>
-    </div>
-
-    <div class="side-stats">
-      <div class="chip">
-        <span class="chip-num">94%</span>
-        <span class="chip-label">Accuracy</span>
-      </div>
-      <div class="chip">
-        <span class="chip-num">3+</span>
-        <span class="chip-label">Projects</span>
-      </div>
-      <div class="chip">
-        <span class="chip-num">1yr</span>
-        <span class="chip-label">Experience</span>
-      </div>
-    </div>
+      <div class="photo-badge">Open to Opportunities</div>
   </div>
 
 
@@ -567,6 +557,22 @@
           <div class="exp-place">Sharda University Uzbekistan</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Stats chips below About Me -->
+  <div class="about-stats fade-up" style="display:flex; gap:16px; justify-content:center; margin-top:48px; flex-wrap:wrap;">
+    <div class="chip">
+      <span class="chip-num">94%</span>
+      <span class="chip-label">Accuracy</span>
+    </div>
+    <div class="chip">
+      <span class="chip-num">3+</span>
+      <span class="chip-label">Projects</span>
+    </div>
+    <div class="chip">
+      <span class="chip-num">1yr</span>
+      <span class="chip-label">Experience</span>
     </div>
   </div>
 </section>
