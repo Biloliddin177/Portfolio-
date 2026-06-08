@@ -501,16 +501,12 @@
         </div>
         <i class="ti ti-arrow-right arrow"></i>
       </div>
-      <div class="proj-item">
+      <div class="proj-item" onclick="openSnakeModal()" style="cursor:pointer;">
         <div>
           <div class="proj-item-title">Hand Gesture Snake Game</div>
           <div class="proj-item-sub">OpenCV · MediaPipe · HCI · FPS optimized</div>
         </div>
-        <a href="https://www.linkedin.com/in/biloliddin-isomiddinov-925276352/" target="_blank"
-           style="color:rgba(0,200,130,0.4);font-size:20px;text-decoration:none;"
-           onclick="event.stopPropagation()" title="View on LinkedIn">
-          <i class="ti ti-brand-linkedin"></i>
-        </a>
+        <i class="ti ti-arrow-right arrow"></i>
       </div>
     </div>
   </div>
@@ -806,7 +802,7 @@
     </button>
 
     <div class="modal-tag">NLP Project</div>
-    <h2 class="modal-title">Uzbek Sentiment<br><span>Analysis</span></h2>
+    <h2 class="modal-title" style="font-weight:500;">Uzbek Sentiment<br><span>Analysis</span></h2>
 
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
       <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">82% Accuracy</span>
@@ -818,7 +814,7 @@
       <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
         <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">OVERVIEW</div>
         <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
-          Fine-tuned XLM-RoBERTa model for Uzbek language sentiment classification — detecting positive, negative, and neutral opinions from text.
+          Fine-tuned XLM-RoBERTa model for Uzbek language sentiment classification — detecting positive, negative, and neutral opinions from text and social media posts.
         </p>
       </div>
 
@@ -855,6 +851,72 @@
   }
   function closeProjectModal() {
     document.getElementById('projectModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+</script>
+
+<!-- SNAKE GAME MODAL -->
+<div id="snakeModal" class="modal-overlay" onclick="if(event.target===this)closeSnakeModal()">
+  <div class="modal-box" style="max-width:560px;">
+    <button class="modal-close" onclick="closeSnakeModal()">
+      <i class="ti ti-x"></i>
+    </button>
+
+    <div class="modal-tag">Computer Vision Project</div>
+    <h2 class="modal-title" style="font-weight:500;">Hand Gesture<br><span>Snake Game</span></h2>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">OpenCV</span>
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">MediaPipe</span>
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">FPS Optimized</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">OVERVIEW</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Developed an interactive Snake game controlled entirely through real-time hand gestures, eliminating the need for traditional keyboard input.
+        </p>
+      </div>
+
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">DETECTION & TRACKING</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Leveraged <strong style="color:var(--text);">OpenCV</strong> and <strong style="color:var(--text);">MediaPipe</strong> for high-precision hand landmark detection and tracking. Implemented custom logic to translate geometric hand coordinates into directional game commands with minimal latency.
+        </p>
+      </div>
+
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">OPTIMIZATION & HCI</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Optimized frame processing to ensure a smooth user experience (<strong style="color:var(--text);">FPS optimization</strong>) and robust performance under varying lighting conditions. Focused on <strong style="color:var(--text);">Human-Computer Interaction (HCI)</strong> principles to create an intuitive and responsive touchless gaming interface.
+        </p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
+      <span class="tag">Python</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">MediaPipe</span>
+      <span class="tag">HCI</span>
+      <span class="tag">Real-time</span>
+      <span class="tag">FPS Optimization</span>
+    </div>
+
+    <a href="https://www.linkedin.com/in/biloliddin-isomiddinov-925276352/" target="_blank"
+       class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;">
+      <i class="ti ti-brand-linkedin"></i> View on LinkedIn
+    </a>
+  </div>
+</div>
+
+<script>
+  function openSnakeModal() {
+    document.getElementById('snakeModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSnakeModal() {
+    document.getElementById('snakeModal').classList.remove('active');
     document.body.style.overflow = '';
   }
 </script>
