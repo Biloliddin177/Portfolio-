@@ -629,8 +629,8 @@
 <!-- CONTACT MODAL -->
 <div id="contactModal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()">
-      <i class="ti ti-x"></i>
+    <button onclick="closeModal()" style="position:sticky;top:0;float:right;margin:-8px -8px 8px 8px;background:#00C882;border:none;color:#050A0F;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;font-weight:700;z-index:999;flex-shrink:0;">
+      ✕
     </button>
     <div class="modal-tag">Get in touch</div>
     <h2 class="modal-title">Let's connect<br><span>& build together</span></h2>
@@ -796,9 +796,9 @@
 
 <!-- PROJECT MODAL -->
 <div id="projectModal" class="modal-overlay" onclick="if(event.target===this)closeProjectModal()">
-  <div class="modal-box" style="max-width:560px;">
-    <button class="modal-close" onclick="closeProjectModal()">
-      <i class="ti ti-x"></i>
+  <div class="modal-box" style="max-width:560px;position:relative;">
+    <button onclick="closeProjectModal()" style="position:sticky;top:0;float:right;margin:-8px -8px 8px 8px;background:#00C882;border:none;color:#050A0F;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;font-weight:700;z-index:999;flex-shrink:0;">
+      ✕
     </button>
 
     <div class="modal-tag">NLP Project</div>
@@ -857,9 +857,10 @@
 
 <!-- SNAKE GAME MODAL -->
 <div id="snakeModal" class="modal-overlay" onclick="if(event.target===this)closeSnakeModal()">
-  <div class="modal-box" style="max-width:560px;">
-    <button class="modal-close" onclick="closeSnakeModal()">
-      <i class="ti ti-x"></i>
+  <div class="modal-box" style="max-width:560px;position:relative;">
+    <!-- X tugma - scroll bilan birga harakatlanadi -->
+    <button onclick="closeSnakeModal()" style="position:sticky;top:0;float:right;margin:-8px -8px 8px 8px;background:#00C882;border:none;color:#050A0F;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;font-weight:700;z-index:999;flex-shrink:0;">
+      ✕
     </button>
 
     <div class="modal-tag">Computer Vision Project</div>
