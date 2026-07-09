@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI/ML Portfolio</title>
+  <title>Biloliddin Isomiddinov · AI/ML Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
@@ -53,7 +53,7 @@
     }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      font-size: 12px; color: var(--muted);
+      font-size: 12px; color: rgba(232,237,242,0.9);
       text-decoration: none; letter-spacing: 1.5px;
       text-transform: uppercase; transition: color 0.2s;
     }
@@ -103,7 +103,7 @@
     }
 
     .hero-left h1 {
-      font-size: 58px; font-weight: 800; line-height: 1.0;
+      font-size: 58px; font-weight: 700; line-height: 1.0;
       margin-bottom: 6px; letter-spacing: -1px;
     }
     .hero-left h1 span { color: var(--green); }
@@ -217,11 +217,17 @@
     /* ── SECTION SHARED ── */
     section { padding: 90px 48px; }
     .sec-label {
-      font-family: 'Space Mono', monospace; font-size: 11px;
-      color: var(--green); letter-spacing: 3px; text-transform: uppercase;
-      display: flex; align-items: center; gap: 14px; margin-bottom: 48px;
+      font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 700;
+      color: #E8EDF2; letter-spacing: 2px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 12px; margin-bottom: 56px;
+      text-transform: capitalize;
     }
-    .sec-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .sec-label::after {
+      content: ''; width: 48px; height: 2px;
+      background: var(--green);
+    }
+
 
     /* ── SKILLS ── */
     #skills { background: var(--bg2); }
@@ -255,7 +261,14 @@
       transform: scaleX(0); transform-origin: left; transition: transform 0.35s;
     }
     .proj-card:hover::before { transform: scaleX(1); }
-    .proj-num { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(0,200,130,0.45); margin-bottom: 18px; }
+    .proj-acc {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'Space Mono', monospace; font-size: 11px;
+      color: var(--green); background: rgba(0,200,130,0.08);
+      border: 1px solid rgba(0,200,130,0.2);
+      padding: 4px 12px; margin-bottom: 14px;
+    }
+    .proj-num { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(0,200,130,0.45); margin-bottom: 10px; }
     .proj-title { font-size: 21px; font-weight: 700; margin-bottom: 10px; }
     .proj-desc { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); line-height: 1.8; margin-bottom: 22px; }
     .proj-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -280,14 +293,25 @@
     #about { background: var(--bg2); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
     .about-text p { font-family: 'Space Mono', monospace; font-size: 13px; color: var(--muted); line-height: 2; margin-bottom: 16px; }
-    .about-text p strong { color: var(--green); font-weight: 700; }
+    .about-text p strong { color: inherit; font-weight: 600; }
     .exp-list { display: flex; flex-direction: column; gap: 0; }
     .exp-item {
       padding: 20px 0; border-bottom: 1px solid var(--border);
       display: grid; grid-template-columns: 80px 1fr;
       gap: 20px; align-items: start;
     }
-    .exp-year { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--green); padding-top: 3px; }
+    .proj-item-badge {
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      background: rgba(0,200,130,0.1); border: 1px solid rgba(0,200,130,0.25);
+      color: var(--green); padding: 2px 7px; margin-left: 8px;
+      vertical-align: middle; letter-spacing: 0.5px;
+    }
+    .proj-item-featured { border-color: rgba(0,200,130,0.2) !important; }
+    .exp-detail {
+      font-family: 'Space Mono', monospace; font-size: 10.5px;
+      color: rgba(232,237,242,0.3); line-height: 1.7; margin-top: 6px;
+    }
+    .exp-year { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--green); padding-top: 3px; line-height: 1.6; }
     .exp-role { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
     .exp-place { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); }
 
@@ -298,7 +322,7 @@
       display: flex; justify-content: space-between; align-items: center;
       background: rgba(0,200,130,0.02); flex-wrap: wrap; gap: 24px;
     }
-    .contact-text h3 { font-size: 30px; font-weight: 800; margin-bottom: 8px; }
+    .contact-text h3 { font-size: 30px; font-weight: 700; margin-bottom: 8px; font-family: 'Syne', sans-serif; }
     .contact-text p { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); }
     .contact-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
     .contact-link {
@@ -353,16 +377,15 @@
 
 <!-- NAV -->
 <nav>
-  <a class="logo" href="#home">AI/ML.DEV</a>
+  <a class="logo" href="#home">B.ISOMIDDINOV</a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="https://drive.google.com/uc?export=download&confirm=t&id=193WkuYx_XacNUq3JGE4ILTFkawCGro4M" target="_blank">Resume</a></li>
   </ul>
-  <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-    Hire Me →
-  </button>
+  <button class="nav-btn" onclick="openModal()">Hire Me →</button>
 </nav>
 
 <!-- HERO -->
@@ -370,13 +393,14 @@
   <div class="hero-left fade-up">
     <div class="hero-tag"><span class="dot"></span>Available for work</div>
     <h1>Biloliddin<br><span>Isomiddinov</span></h1>
-    <p class="hero-sub">AI / ML Engineer<br>Deep Learning · NLP · Computer Vision</p>
+    <p class="hero-sub">AI / ML Engineer<br>NLP &amp; LLMs · Computer Vision</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
         View Projects
       </button>
       <a href="https://drive.google.com/uc?export=download&confirm=t&id=193WkuYx_XacNUq3JGE4ILTFkawCGro4M"
-         target="_blank" class="btn-ghost" style="display:inline-block;text-decoration:none;"
+         target="_blank" class="btn-ghost"
+         style="display:inline-block;text-decoration:none;"
          onclick="window.open('https://drive.google.com/uc?export=download&confirm=t&id=193WkuYx_XacNUq3JGE4ILTFkawCGro4M','_blank');return false;">
         Download CV
       </a>
@@ -388,34 +412,23 @@
       <div class="corner-tr"></div>
       <div class="corner-bl"></div>
 
-      <div class="photo-placeholder" id="dropZone" onclick="document.getElementById('fileInput').click()">
-        <div class="scan-line" id="scanLine"></div>
-        <i class="ti ti-user-circle upload-icon"></i>
-        <div class="upload-text">CLICK TO UPLOAD<br>YOUR PHOTO</div>
-        <div class="upload-hint">JPG, PNG, WEBP</div>
+      <!-- Owner rasmi: src ga rasm URL ni qo'ying -->
+      <img class="photo-img" 
+           src="https://raw.githubusercontent.com/Biloliddin177/Portfolio-/main/photo_2025-10-17_11-14-50.jpg"
+           alt="Biloliddin Isomiddinov"
+           style="display:block;"
+           onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';"/>
+
+      <!-- Rasm yuklanmasa fallback -->
+      <div id="photoFallback" style="display:none; width:100%; height:100%; border:1px dashed rgba(0,200,130,0.3); flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+        <i class="ti ti-user-circle" style="font-size:48px; color:rgba(0,200,130,0.4);"></i>
+        <span style="font-family:'Space Mono',monospace; font-size:11px; color:rgba(0,200,130,0.4); letter-spacing:1px;">BILOLIDDIN ISOMIDDINOV</span>
       </div>
 
-      <img class="photo-img" id="photoImg" alt="Profile photo"/>
-      <div class="photo-badge">AI / ML ENGINEER</div>
-    </div>
-
-    <div class="side-stats">
-      <div class="chip">
-        <span class="chip-num">94%</span>
-        <span class="chip-label">Accuracy</span>
-      </div>
-      <div class="chip">
-        <span class="chip-num">18+</span>
-        <span class="chip-label">Projects</span>
-      </div>
-      <div class="chip">
-        <span class="chip-num">5yr</span>
-        <span class="chip-label">Experience</span>
-      </div>
-    </div>
+      <div class="photo-badge">Open to Opportunities</div>
   </div>
 
-  <input type="file" id="fileInput" accept="image/*"/>
+
 </section>
 
 <!-- SKILLS -->
@@ -440,12 +453,6 @@
       <div class="skill-desc">Object detection, segmentation, image classification, OCR</div>
       <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
     </div>
-    <div class="skill-card fade-up" style="transition-delay:0.15s">
-      <span class="skill-emoji">☁️</span>
-      <div class="skill-name">MLOps</div>
-      <div class="skill-desc">Docker, AWS SageMaker, MLflow, CI/CD for ML pipelines</div>
-      <div class="skill-bar"><div class="skill-fill" data-width="74%"></div></div>
-    </div>
     <div class="skill-card fade-up" style="transition-delay:0.2s">
       <span class="skill-emoji">📊</span>
       <div class="skill-name">Data Science</div>
@@ -458,54 +465,52 @@
       <div class="skill-desc">FastAPI, async Python, REST/GraphQL, system integration</div>
       <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
     </div>
+    <div class="skill-card fade-up" style="transition-delay:0.3s">
+      <span class="skill-emoji">☁️</span>
+      <div class="skill-name">MLOps</div>
+      <div class="skill-desc">Docker, AWS SageMaker, MLflow, CI/CD for ML pipelines</div>
+      <div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="sec-label fade-up">Selected projects</div>
+  <div class="sec-label fade-up">Featured Work</div>
   <div class="projects-row">
     <div class="proj-card fade-up">
       <div class="proj-num">01 — FEATURED</div>
-      <div class="proj-title">Uzbek Sentiment analysis in natural language processing</div>
+      <div class="proj-title">Lung Cancer Segmentation</div>
+      <div class="proj-acc"><i class="ti ti-chart-bar"></i> 87% Accuracy</div>
       <div class="proj-desc">
-        Fine-tuned a large language model on 50M+ Uzbek text corpus.
-        RLHF-based alignment, bilingual Uz/Ru support, real-time inference API.
+        End-to-end segmentation pipeline using PyTorch to detect cancerous nodules in medical imaging.
+        Implemented U-Net architecture with customized skip connections to improve spatial accuracy
+        in high-resolution scans. Optimized model performance to handle class imbalance,
+        contributing to more reliable automated diagnostics.
       </div>
       <div class="proj-tags">
         <span class="tag">PyTorch</span>
-        <span class="tag">RLHF</span>
-        <span class="tag">Transformers</span>
-        <span class="tag">FastAPI</span>
+        <span class="tag">U-Net</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Medical Imaging</span>
+        <span class="tag">Segmentation</span>
       </div>
     </div>
 
     <div class="proj-list fade-up" style="transition-delay:0.1s">
-      <div class="proj-item">
+      <div class="proj-item proj-item-featured" onclick="openProjectModal()" style="cursor:pointer;">
         <div>
-          <div class="proj-item-title">Medical Image Classifier</div>
-          <div class="proj-item-sub">CNN · 97% accuracy · ResNet50</div>
+          <div class="proj-item-title">Uzbek Sentiment Analysis
+            <span class="proj-item-badge">82% acc</span>
+          </div>
+          <div class="proj-item-sub">XLM-RoBERTa · 47,400 samples · Web Scraping · Data Augmentation</div>
         </div>
         <i class="ti ti-arrow-right arrow"></i>
       </div>
-      <div class="proj-item">
+      <div class="proj-item" onclick="openSnakeModal()" style="cursor:pointer;">
         <div>
-          <div class="proj-item-title">Real-time Object Detector</div>
-          <div class="proj-item-sub">YOLOv8 · Edge deployment · ONNX</div>
-        </div>
-        <i class="ti ti-arrow-right arrow"></i>
-      </div>
-      <div class="proj-item">
-        <div>
-          <div class="proj-item-title">RAG Document System</div>
-          <div class="proj-item-sub">LangChain · Pinecone · GPT-4</div>
-        </div>
-        <i class="ti ti-arrow-right arrow"></i>
-      </div>
-      <div class="proj-item">
-        <div>
-          <div class="proj-item-title">Fraud Detection Engine</div>
-          <div class="proj-item-sub">XGBoost · 99.3% precision</div>
+          <div class="proj-item-title">Hand Gesture Snake Game</div>
+          <div class="proj-item-sub">OpenCV · MediaPipe · HCI · FPS optimized</div>
         </div>
         <i class="ti ti-arrow-right arrow"></i>
       </div>
@@ -519,17 +524,26 @@
   <div class="about-grid">
     <div class="about-text fade-up">
       <p>
-        I'm an <strong>AI / ML Engineer</strong> based in Tashkent, Uzbekistan, passionate about
-        turning cutting-edge research into real-world products. My work spans NLP, computer vision,
-        and scalable ML systems.
+        I'm <strong>Biloliddin Isomiddinov</strong>, an AI/ML Engineer based in Namangan,
+        Uzbekistan. I specialize in <strong>NLP & LLMs</strong> and <strong>Computer Vision</strong> —
+        building intelligent systems that solve real-world problems.
       </p>
       <p>
-        I focus on building models that are not only accurate but also <strong>explainable, fair,
-        and production-ready</strong>. I contribute to open-source NLP tools for the Uzbek language.
+        Currently completing my <strong>B.Tech in AI/ML</strong> at Sharda University Uzbekistan (2022–2026),
+        I have hands-on experience developing production-ready ML models including
+        <strong>Uzbek Sentiment Analysis</strong> using XLM-RoBERTa (82% accuracy) and
+        <strong>Lung Cancer Segmentation</strong> using U-Net (87% accuracy).
+      </p>
+      <p>
+        I also gained practical IT experience as a <strong>System Admin Intern</strong> at Imkon Finans,
+        working on network infrastructure and cybersecurity systems. I'm passionate about applying AI to
+        <strong>healthcare, NLP for low-resource languages</strong>, and human-computer interaction.
+        Currently open to opportunities in AI/ML engineering and research.
       </p>
       <div style="margin-top:28px">
-        <a href="https://drive.google.com/uc?export=download&confirm=t&id=193WkuYx_XacNUq3JGE4ILTFkawCGro4M"
-           target="_blank" class="btn-primary" style="display:inline-block;text-decoration:none;"
+        <a href="https://drive.google.com/uc?export=download&confirm=t&id=193WkuYx_XacNUq3JGE4ILTFkawCGro4M" 
+           target="_blank" class="btn-primary" 
+           style="display:inline-block;text-decoration:none;"
            onclick="window.open('https://drive.google.com/uc?export=download&confirm=t&id=193WkuYx_XacNUq3JGE4ILTFkawCGro4M','_blank');return false;">
           Download CV
         </a>
@@ -538,33 +552,36 @@
 
     <div class="exp-list fade-up" style="transition-delay:0.1s">
       <div class="exp-item">
-        <div class="exp-year">2025 →</div>
+        <div class="exp-year">Feb–Apr<br>2026</div>
         <div>
-          <div class="exp-role">Senior ML Engineer</div>
-          <div class="exp-place">Tech company · Tashkent</div>
+          <div class="exp-role">System Admin Intern</div>
+          <div class="exp-place">Imkon Finans</div>
+          <div class="exp-detail">Assisted System Administrator in configuring and maintaining the organization's internal network infrastructure, diagnosing and resolving network issues. Strengthened corporate cybersecurity measures by deploying and centrally managing antivirus protection systems across workstations — a critical requirement in the microfinance data security environment. Ensured uninterrupted operation of servers and hardware, and provided technical support to staff.</div>
         </div>
       </div>
       <div class="exp-item">
-        <div class="exp-year">2024</div>
+        <div class="exp-year">2022–2026</div>
         <div>
-          <div class="exp-role">ML Engineer</div>
-          <div class="exp-place">Startup · Remote</div>
-        </div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-year">2023</div>
-        <div>
-          <div class="exp-role">Data Scientist</div>
-          <div class="exp-place">Research Lab</div>
-        </div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-year">2022</div>
-        <div>
-          <div class="exp-role">B.Tech. AI/ML</div>
+          <div class="exp-role">B.Tech. AI / ML</div>
           <div class="exp-place">Sharda University Uzbekistan</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Stats chips below About Me -->
+  <div class="about-stats fade-up" style="display:flex; gap:16px; justify-content:center; margin-top:48px; flex-wrap:wrap;">
+    <div class="chip">
+      <span class="chip-num">87%</span>
+      <span class="chip-label">Accuracy</span>
+    </div>
+    <div class="chip">
+      <span class="chip-num">14+</span>
+      <span class="chip-label">Projects</span>
+    </div>
+    <div class="chip">
+      <span class="chip-num">1yr</span>
+      <span class="chip-label">Experience</span>
     </div>
   </div>
 </section>
@@ -572,7 +589,7 @@
 <!-- CONTACT -->
 <div id="contact" class="contact-strip fade-up">
   <div class="contact-text">
-    <h3>Let's build something.</h3>
+    <h3>Have an idea? Let's make it real.</h3>
     <p>Open to freelance, full-time & research collaborations</p>
   </div>
   <div class="contact-links">
@@ -582,10 +599,16 @@
     <a class="contact-link" href="https://linkedin.com/in/biloliddin-isomiddinov-925276352" target="_blank">
       <i class="ti ti-brand-linkedin"></i> LinkedIn
     </a>
-    <a class="contact-link" href="mailto:biloliddinisomiddinov4@gmail.com">
+    <a class="contact-link" href="https://t.me/Isomiddinov1" target="_blank">
+      <i class="ti ti-brand-telegram"></i> Telegram
+    </a>
+    <a class="contact-link" href="https://instagram.com/golden_b.i" target="_blank">
+      <i class="ti ti-brand-instagram"></i> Instagram
+    </a>
+    <a class="contact-link" href="https://mail.google.com/mail/?view=cm&to=biloliddinisomiddinov4@gmail.com" target="_blank">
       <i class="ti ti-mail"></i> Email
     </a>
-    <button class="btn-primary">Get in touch →</button>
+    <button class="btn-primary" onclick="openModal()">Contact Me →</button>
   </div>
 </div>
 
@@ -596,38 +619,6 @@
 </footer>
 
 <script>
-  /* ── PHOTO UPLOAD ── */
-  const fileInput  = document.getElementById('fileInput');
-  const photoImg   = document.getElementById('photoImg');
-  const dropZone   = document.getElementById('dropZone');
-  const scanLine   = document.getElementById('scanLine');
-
-  function showPhoto(src) {
-    photoImg.src = src;
-    photoImg.style.display = 'block';
-    dropZone.style.display = 'none';
-    scanLine.style.display = 'none';
-  }
-
-  fileInput.addEventListener('change', e => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = ev => showPhoto(ev.target.result);
-    reader.readAsDataURL(file);
-  });
-
-  dropZone.addEventListener('dragover',  e => { e.preventDefault(); dropZone.style.borderColor = 'var(--green)'; });
-  dropZone.addEventListener('dragleave', () => { dropZone.style.borderColor = 'rgba(0,200,130,0.35)'; });
-  dropZone.addEventListener('drop', e => {
-    e.preventDefault();
-    const file = e.dataTransfer.files[0];
-    if (!file || !file.type.startsWith('image/')) return;
-    const reader = new FileReader();
-    reader.onload = ev => showPhoto(ev.target.result);
-    reader.readAsDataURL(file);
-  });
-
   /* ── INTERSECTION OBSERVER — fade-up & skill bars ── */
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -648,5 +639,304 @@
     nav.style.padding = window.scrollY > 60 ? '12px 48px' : '18px 48px';
   });
 </script>
+<!-- CONTACT MODAL -->
+<div id="contactModal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button onclick="closeModal()" class="modal-close">
+      ✕
+    </button>
+    <div class="modal-tag">Get in touch</div>
+    <h2 class="modal-title">Let's connect<br><span>& build together</span></h2>
+    <p class="modal-sub">Open to freelance, full-time & research collaborations</p>
+
+    <div class="modal-links">
+      <a class="modal-link" href="https://linkedin.com/in/biloliddin-isomiddinov-925276352" target="_blank">
+        <div class="ml-icon" style="background:rgba(0,119,181,0.12);border-color:rgba(0,119,181,0.3)">
+          <i class="ti ti-brand-linkedin" style="color:#0077B5"></i>
+        </div>
+        <div class="ml-info">
+          <span class="ml-name">LinkedIn</span>
+          <span class="ml-handle">biloliddin-isomiddinov</span>
+        </div>
+        <i class="ti ti-arrow-right ml-arrow"></i>
+      </a>
+
+      <a class="modal-link" href="https://github.com/Biloliddin177" target="_blank">
+        <div class="ml-icon" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)">
+          <i class="ti ti-brand-github" style="color:#E8EDF2"></i>
+        </div>
+        <div class="ml-info">
+          <span class="ml-name">GitHub</span>
+          <span class="ml-handle">Biloliddin177</span>
+        </div>
+        <i class="ti ti-arrow-right ml-arrow"></i>
+      </a>
+
+      <a class="modal-link" href="https://t.me/Isomiddinov1" target="_blank">
+        <div class="ml-icon" style="background:rgba(0,136,204,0.1);border-color:rgba(0,136,204,0.3)">
+          <i class="ti ti-brand-telegram" style="color:#0088CC"></i>
+        </div>
+        <div class="ml-info">
+          <span class="ml-name">Telegram</span>
+          <span class="ml-handle">@Isomiddinov1</span>
+        </div>
+        <i class="ti ti-arrow-right ml-arrow"></i>
+      </a>
+
+      <a class="modal-link" href="https://instagram.com/golden_b.i" target="_blank">
+        <div class="ml-icon" style="background:rgba(225,48,108,0.1);border-color:rgba(225,48,108,0.25)">
+          <i class="ti ti-brand-instagram" style="color:#E1306C"></i>
+        </div>
+        <div class="ml-info">
+          <span class="ml-name">Instagram</span>
+          <span class="ml-handle">@golden_b.i</span>
+        </div>
+        <i class="ti ti-arrow-right ml-arrow"></i>
+      </a>
+
+      <a class="modal-link" href="https://mail.google.com/mail/?view=cm&to=biloliddinisomiddinov4@gmail.com" target="_blank">
+        <div class="ml-icon" style="background:rgba(0,200,130,0.08);border-color:rgba(0,200,130,0.25)">
+          <i class="ti ti-mail" style="color:#00C882"></i>
+        </div>
+        <div class="ml-info">
+          <span class="ml-name">Email</span>
+          <span class="ml-handle">biloliddinisomiddinov4@gmail.com</span>
+        </div>
+        <i class="ti ti-arrow-right ml-arrow"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(5,10,15,0.85);
+    backdrop-filter: blur(10px);
+    display: flex; align-items: flex-start; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+    padding: 40px 16px;
+  }
+  .modal-overlay.active { opacity: 1; pointer-events: all; }
+
+  .modal-box {
+    background: #0C1219;
+    border: 1px solid rgba(0,200,130,0.18);
+    padding: 44px 40px;
+    width: 100%; max-width: 480px;
+    position: relative;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(.22,.68,0,1.2);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    height: fit-content;
+  }
+  .modal-overlay.active .modal-box { transform: translateY(0) scale(1); }
+
+  .modal-close {
+    position: absolute; top: 18px; right: 18px;
+    background: rgba(0,200,130,0.07); border: 1px solid rgba(0,200,130,0.15);
+    color: var(--muted); width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 16px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .modal-close:hover { background: rgba(0,200,130,0.15); color: var(--green); }
+
+  .modal-tag {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--green); letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .modal-tag::before { content:''; width:18px; height:1px; background:var(--green); }
+
+  .modal-title {
+    font-size: 30px; font-weight: 800; line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .modal-title span { color: var(--green); }
+
+  .modal-sub {
+    font-family: 'Space Mono', monospace; font-size: 11px;
+    color: var(--muted); margin-bottom: 30px; line-height: 1.7;
+  }
+
+  .modal-links { display: flex; flex-direction: column; gap: 10px; }
+
+  .modal-link {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,0.07);
+    text-decoration: none; color: var(--text);
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  }
+  .modal-link:hover {
+    border-color: rgba(0,200,130,0.3);
+    background: rgba(0,200,130,0.03);
+    transform: translateX(4px);
+  }
+
+  .ml-icon {
+    width: 40px; height: 40px; border-radius: 2px;
+    border: 1px solid;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+
+  .ml-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+  .ml-name { font-size: 13px; font-weight: 600; }
+  .ml-handle { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); }
+
+  .ml-arrow { color: rgba(0,200,130,0.3); font-size: 18px; transition: color 0.2s; }
+  .modal-link:hover .ml-arrow { color: var(--green); }
+
+  @media (max-width: 520px) {
+    .modal-box { padding: 32px 22px; margin: 16px; }
+    .modal-title { font-size: 24px; }
+  }
+</style>
+
+<script>
+  function openModal() {
+    document.getElementById('contactModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('contactModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+</script>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal-overlay" onclick="if(event.target===this)closeProjectModal()">
+  <div class="modal-box" style="max-width:560px;position:relative;">
+    <button onclick="closeProjectModal()" class="modal-close">
+      ✕
+    </button>
+
+    <div class="modal-tag">NLP Project</div>
+    <h2 class="modal-title" style="font-weight:500;">Uzbek Sentiment<br><span>Analysis</span></h2>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">82% Accuracy</span>
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">47,400 Samples</span>
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">XLM-RoBERTa</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">OVERVIEW</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Fine-tuned XLM-RoBERTa model for Uzbek language sentiment classification — detecting positive, negative, and neutral opinions from text and social media posts.
+        </p>
+      </div>
+
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">DATASET</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          47,400 balanced Uzbek text samples collected via <strong style="color:var(--text);">Web Scraping</strong>. Applied <strong style="color:var(--text);">Data Augmentation</strong> techniques to handle class imbalance and improve generalization.
+        </p>
+      </div>
+
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">METHODOLOGY</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Fine-tuned multilingual <strong style="color:var(--text);">XLM-RoBERTa</strong> transformer on domain-specific Uzbek corpus. Achieved <strong style="color:var(--green);">82% accuracy</strong> on test set with strong F1-score across all sentiment classes.
+        </p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <span class="tag">PyTorch</span>
+      <span class="tag">XLM-RoBERTa</span>
+      <span class="tag">HuggingFace</span>
+      <span class="tag">Web Scraping</span>
+      <span class="tag">Data Augmentation</span>
+      <span class="tag">NLP</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openProjectModal() {
+    document.getElementById('projectModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProjectModal() {
+    document.getElementById('projectModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+</script>
+
+<!-- SNAKE GAME MODAL -->
+<div id="snakeModal" class="modal-overlay" onclick="if(event.target===this)closeSnakeModal()">
+  <div class="modal-box" style="max-width:560px;position:relative;">
+    <!-- X tugma - scroll bilan birga harakatlanadi -->
+    <button onclick="closeSnakeModal()" class="modal-close">
+      ✕
+    </button>
+
+    <div class="modal-tag">Computer Vision Project</div>
+    <h2 class="modal-title" style="font-weight:500;">Hand Gesture<br><span>Snake Game</span></h2>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">OpenCV</span>
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">MediaPipe</span>
+      <span style="font-family:'Space Mono',monospace;font-size:11px;background:rgba(0,200,130,0.1);border:1px solid rgba(0,200,130,0.25);color:var(--green);padding:4px 12px;">FPS Optimized</span>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">OVERVIEW</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Developed an interactive Snake game controlled entirely through real-time hand gestures, eliminating the need for traditional keyboard input.
+        </p>
+      </div>
+
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">DETECTION & TRACKING</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Leveraged <strong style="color:var(--text);">OpenCV</strong> and <strong style="color:var(--text);">MediaPipe</strong> for high-precision hand landmark detection and tracking. Implemented custom logic to translate geometric hand coordinates into directional game commands with minimal latency.
+        </p>
+      </div>
+
+      <div style="background:rgba(0,200,130,0.03);border:1px solid rgba(0,200,130,0.1);padding:16px 18px;">
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--green);letter-spacing:2px;margin-bottom:8px;">OPTIMIZATION & HCI</div>
+        <p style="font-family:'Space Mono',monospace;font-size:12px;color:rgba(232,237,242,0.6);line-height:1.8;">
+          Optimized frame processing to ensure a smooth user experience (<strong style="color:var(--text);">FPS optimization</strong>) and robust performance under varying lighting conditions. Focused on <strong style="color:var(--text);">Human-Computer Interaction (HCI)</strong> principles to create an intuitive and responsive touchless gaming interface.
+        </p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
+      <span class="tag">Python</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">MediaPipe</span>
+      <span class="tag">HCI</span>
+      <span class="tag">Real-time</span>
+      <span class="tag">FPS Optimization</span>
+    </div>
+
+    <a href="https://www.linkedin.com/in/biloliddin-isomiddinov-925276352/" target="_blank"
+       class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;">
+      <i class="ti ti-brand-linkedin"></i> View on LinkedIn
+    </a>
+  </div>
+</div>
+
+<script>
+  function openSnakeModal() {
+    document.getElementById('snakeModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSnakeModal() {
+    document.getElementById('snakeModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+</script>
+
 </body>
 </html>
